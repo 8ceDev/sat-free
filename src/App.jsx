@@ -17,7 +17,7 @@ function App() {
   const [history, setHistory] = useState(() => loadHistory());
 
   useEffect(() => {
-    fetch("/pilot.json")
+    fetch("/bank.json")
       .then((res) => res.json())
       .then((data) => setBank(data));
   }, []);

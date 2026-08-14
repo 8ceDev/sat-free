@@ -17,8 +17,7 @@ function App() {
   const [history, setHistory] = useState(() => loadHistory());
 
   useEffect(() => {
-    fetch("/bank.json")
-      .then((res) => res.json())
+        fetch(import.meta.env.BASE_URL + "bank.json")      .then((res) => res.json())
       .then((data) => setBank(data));
   }, []);
 
